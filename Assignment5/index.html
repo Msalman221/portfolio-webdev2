@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="container">
+    <header>
+        <div class="titles">
+            <h1>ChiMemories: Reliving My Favorite 312 Moments</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="button-container"> 
+      <button id="suprise">Guess what?</button>
+      <button id="redec">Mix things up!</button>
+
+    <main>
+        <figure>
+            <img id="Chi" src="img/Chi.jpeg" alt="pic taken by me">
+            <figcaption>The South Loop</figcaption>
+        </figure>
+        <p class="special">Visit 312</p>
+        <p class="hidden">Want to relive your Chicago Memories? Contact us today!</p>
+        <p>As a new Chicago, resident, I’ve enjoyed the beautiful memories that I’ve had while living in Chicago. Coming from Detroit, Michigan, I didn’t have the opportunity to see things like cityscapes, sunsets reflecting off of sky, rises, and also missed out on hearing the noises of a city. When returning home to Detroit, it always feels so quiet and the scenery feels so bland. Because of this, I decided to create this site dedicating it to reliving my favorite Chicago memories.</p>
+    </main>
+
+    <footer>&#169; Maya Salman 2024</footer>
+</div>
+
+<!-- Link to jQuery on Google CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<!-- jQuery code -->
+<script>
+$(document).ready(function() {
+    // Hides the special paragraph initially
+    $('p.special').hide();
+
+    // Toggles the hidden paragraph when the title is clicked
+    $('h1').click(function() {
+        $('p.hidden').slideToggle(200);
+    });
+
+    // Fades in the special paragraph when the "Guess what?" button is clicked
+    $('button#suprise').click(function() {
+        $('p.special').fadeIn();
+    });
+
+    // Changes the appearance of the website when the "Mix things up!" button is clicked
+    $('button#redec').click(function() {
+        // Changes the background color to light green
+        $('body').css({
+            'background': 'lightgreen',
+            'color': 'white'
+        });
+
+        // Changes the title color to orange
+        $('h1').css('color', 'orange');
+
+        // Changes the navigation links color to yellow
+        $('nav ul li a').css('color', 'yellow');
+
+        // Changes the font-family of the entire body text
+        $('body').css('font-family', 'arial');
+
+        // Changes the text of the title
+        $('h1').text('Help me Relive My Chicago Memories');
+
+        // Changes the text of the first paragraph in the main section
+        $('main p:first').text('Welcome to my Alter Ego!!');
+
+        // Change font size of navigation links
+        $('nav ul li a').css('font-size', '20px');
+
+        // Change background color of footer
+        $('footer').css('background-color', 'lightblue');
+
+        // Change text color of footer
+        $('footer').css('color', 'darkblue');
+
+        // Increase padding of footer
+        $('footer').css('padding', '30px');
+
+        // Rotate the header title
+        $('.titles').css({
+            'transform': 'rotate(10deg)',
+            'transition': 'transform 1s ease'
+        });
+
+        // Change font weight of paragraphs
+        $('p').css('font-weight', 'bold');
+
+        // Scale the main image
+        $('img').css({
+            'transform': 'scale(1.2)',
+            'transition': 'transform 1s ease'
+        });
+
+        // Change font of all text
+        $('body').css('font-family', 'impact');
+
+        // Add continuous page animations
+        setInterval(function() {
+            $('body').toggleClass('animated');
+        }, 2000);
+
+        // Add bouncing animation to buttons
+        $('button').css('animation', 'bounce 0.5s infinite alternate');
+
+        // Add rotating animation to navigation links
+        $('nav ul li').css({
+            'animation': 'spin 1s linear infinite',
+            'transform-origin': '50% 50%'
+        });
+
+        // Add pulsing animation to header
+        $('.titles').css({
+            'animation': 'pulse 1s infinite'
+        });
+
+        // Add shaking animation to footer
+        $('footer').css('animation', 'shake 0.5s infinite alternate');
+
+        // Add spinning animation to main image
+        $('img').css({
+            'animation': 'spin 5s linear infinite'
+        });
+
+        // Add shaking animation to special paragraph
+        $('p.special').css('animation', 'shake 0.5s infinite alternate');
+
+        // Add crazy animations
+        $('body').addClass('crazy-animation');
+
+    });
+
+});// close ready
+
+
+       
+      
+</script>
+
+</body>
+</html>
