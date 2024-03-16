@@ -1,0 +1,163 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4em;
+}
+
+/* "Mobile first" CSS */
+
+#container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+
+header, section {
+    background: lightgreen;
+	text-align: center;
+    padding: 25px;
+    color: black;
+    width: 100%;
+    max-width: 1000px; /* Adjust this width as needed */
+    box-sizing: border-box; 
+}
+
+
+
+/* The three div's with cat background images */
+#Mac,#Sushi,#Coffee {
+    height: 100%;
+	background-size: cover; /* Ensure background image covers the entire container */
+    background-position: center;
+}
+
+#Mac {
+    background: url('../img/Mac.png') fixed center no-repeat;
+}
+
+#Sushi {
+    background: url('../img/Sushi.png') fixed center no-repeat;
+    position: relative;
+}
+
+#Coffee {
+    background: url('../img/Coffee.png') fixed center no-repeat;
+}
+
+#Sushi h1 {
+	background: rgba(255, 0, 0, 0.896);
+    padding: 25px;
+	position: absolute;
+	text-align: center;
+    color: black;
+    width: 100%;
+	box-sizing: border-box;
+}
+
+footer {
+    background: pink;
+    padding: 25px;
+	text-align: center;
+    color: black;
+    width: 100%;
+    max-width: 2000px; /* Adjust this width as needed */
+    box-sizing: border-box; 
+}
+
+/* CSS classes for JavaScript scrolling triggers */
+
+/* Fade-in effect for the header */
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in h1 {
+    color: red; /* Change color as needed */
+}
+
+/* Scale effect for a specific section */
+.scale-up {
+    transform: scale(1.1); /* Increase scale factor as needed */
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Fade-in effect for the footer */
+.fade-in {
+    opacity: 1;
+    transition: opacity 1.4s ease-in-out;
+}
+
+.fade-in p {
+    color: purple; /* Change color as needed */
+}
+
+/* A better looking default horizontal rule */
+hr {
+    display: block;
+    height: 1px;
+    border: 0px;
+    border-top: 1px solid #ccc;
+    margin: 1em 0px;
+    padding: 0px;
+}
+
+/* ========================================
+MEDIA QUERIES!
+======================================== */
+
+/* New CSS for tablet sizes.
+You can change the pixel number below */
+@media all and (min-width: 768px) {
+    header, section {
+        padding: 50px;
+    }
+
+	#Mac {
+        background-size: auto 100%; /* Adjust the percentage as needed */ }
+
+	#Sushi {
+        background-size: auto 100%; /* Adjust the percentage as needed */
+    }
+
+    #Coffee {
+        background-size: auto 100%; /* Adjust the percentage as needed */
+    }
+}
+
+/* New CSS for desktop sizes.
+You can change the pixel number below */
+@media all and (min-width: 1024px) {
+    
+	header, section, footer {
+        max-width: 1000px; /* Adjust this width as needed */
+        margin: 0 auto; /* Center the content */
+    }
+
+	#Sushi h1 {
+		box-sizing: auto 100%;
+		margin: 0 auto;
+	}
+
+	#Mac {
+        background-size: auto 100%; /* Adjust the percentage as needed */
+    }
+
+	#Sushi {
+        background-size: auto 100%; /* Adjust the percentage as needed */
+    }
+
+    #Coffee {
+        background-size: auto 100%; /* Adjust the percentage as needed */
+    }
+
+}

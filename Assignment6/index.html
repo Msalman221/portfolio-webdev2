@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assignment 6</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Food Allergies!</h1>
+    </header>
+
+    <div id="container">
+
+        <div id="Mac"></div>
+
+        <section id="one">
+
+            <p>I have always wondered why people have allergies to the most random of foods and others don't. I mean people can be allergic to chocolate, bananas, nuts, and the most devastating of them all sushi. I never understood why they could die from something that I eat every day. I've been questioning for some time now how food allergies come to be, but just never had the time to actually sit down and research it. Now that I have the chance to have my many questions answered with this assignment. I hope to find out what happens in each person's immune system that causes them to be allergic to a particular food.</p>
+        </section>
+    </div>
+        <div id="Sushi">
+            <h1>Fish is one of the most common allergies!</h1>
+        </div>
+
+        <section id="two">
+            <p>From what I've researched the symptoms of food allergies depend on each person and their allergy. But according to the mayo clinic.org some symptoms for people who consume, or are around food that they are allergic to. Are hives, excessive itching or tingling on the face or the whole body, trouble breathing, diarrhea, vomiting, nausea, lightheadedness, fainting, and swelling of the face or the entire body. But these symptoms could differ depending on how severe the person's allergy is. For instance, one person could be mildly allergic to peanuts and just break out in hives which might be irritating but bearable and would eventually swell down on its own. But another person who is highly allergic to peanuts could go into what is called anaphylaxis shock, which if not treated timely could be deadly. This why people who have severe nut allergies carry an EpiPen on them at all times. In case they go into anaphylaxis shock or other uncomfortable reactions that are not bearable.</p>
+        </section>
+
+        <div id="Coffee"></div>
+
+        <section id="three">
+            <p>There are no real treatments or cures for a food allergy (some experimental treatments). As stated by the mayo clinic, "The only way to avoid an allergic reaction is to avoid the foods that cause signs and symptoms." So instead of a treatment or a vaccine, you would just have to work on ways to prevent allergic reactions. And in situations where you have a severe food allergy that is harder to prevent a reaction from, it is good to keep an EpiPen on you at all times. But other than that the most you can do is try your best to stay away from food that you are allergic to. And managing the allergy by taking over the counter topical antibiotics or other allergy relieving medicines that you could buy without a prescription.</p>
+        </section>
+
+    </div><!-- close "container" -->
+
+    <footer>
+        <p>&copy; 2024 Maya Salman. All rights reserved.</p>
+    </footer>
+
+    <!-- Link to jQuery on Google CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+    <!-- Container for your jQuery code -->
+    <script>
+        $(document).ready(function () {
+
+            $(window).scroll(function() {
+                var scrollPos = $(this).scrollTop();
+
+                // First scrolling trigger: Fade-in effect for the header
+                if (scrollPos > 50) {
+                    $('header').addClass('fade-in');
+                } else {
+                    $('header').removeClass('fade-in');
+                }
+
+                // Second scrolling trigger: Scale effect for the second section
+                if (scrollPos > 50) {
+                    $('#two').addClass('scale-up');
+                } else {
+                    $('#two').removeClass('scale-up');
+                }
+
+                // Third scrolling trigger: Fade-in effect for the footer
+                if (scrollPos > 50) {
+                    $('footer').addClass('fade-in');
+                } else {
+                    $('footer').removeClass('fade-in');
+                }
+            });
+
+        }); //close .ready()
+
+    </script>
+
+</body>
+
+</html>
